@@ -52,6 +52,9 @@ typedef enum logic [OPCODE_WIDTH-1:0] {
 
 // Multiply Operations (100xx)
     OP_MUL = 5'b10000,   // Multiply (lower 32 bits)
+    OP_MULH =5'b10001,  // Multiply (singed)
+    OP_MULHU =5'b10010, //Multiply(unsigned)
+    OP_MULSU = 5'b10011, // Multiply (signed & unsigned)
 
 // Divide Operations (101xx)
     OP_DIV  = 5'b10100,  // Signed division
