@@ -173,3 +173,22 @@ always_comb begin
     carry_out = 1'b0;
   end
 end
+
+  always_comb begin
+  if(func_sel == 3'b000) begin
+    overflow_out = arith_overflow;
+  end else begin
+    overflow_out =1'b0;
+  end
+  end
+
+  always_comb begin
+    if(func_sel ==3'b110) begin
+      saturation_out = sat_occurred;
+    end else begin
+      saturation_out =1'b0;
+    end
+  end
+endmodule : alu_core
+    
+  
